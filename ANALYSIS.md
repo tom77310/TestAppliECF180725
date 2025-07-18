@@ -4,7 +4,7 @@
 |RegistrationController.php|Test d'integration-------|WebTestCase---------|Test d'intéraction entre 2 fonctionnalités------------------------------|----Priorité 3--|
 |SecurityController.php----|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test entre 2 fonctionnalitées|----Priorité 3--|
 |TaskController.php--------|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test entre 2 fonctionnalitées|----Priorité 3--|
-|TaskService.php-----------|Test Unitaire + Mock-----|PhpUnit Mock--------|Test Unitaire et Mock recommandé car c'est un test d'un service---------|----Priorité 2--|
+|TaskService.php-----------|Test d'integration-------|PhpUnit Mock--------|Test d'integration recommandé car c'est un test d'un service------------|----Priorité 2--|
 |TaskRepository.php--------|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test entre 2 fonctionnalitées|----Priorité 3--|
 |UserRepository.php--------|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test de repository-----------|----Priorité 3--|
 
