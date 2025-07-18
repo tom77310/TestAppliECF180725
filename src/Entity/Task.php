@@ -44,4 +44,76 @@ class Task
     {
         return $this->id;
     }
+
+    /**
+     * Set the value of id
+     */
+    public function setId(?int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of title
+     */
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set the value of title
+     */
+    public function setTitle(?string $title): self
+    {
+
+
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of description
+     */
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set the value of description
+     */
+    public function setDescription(?string $description): self
+    {
+        if ($description === null || trim($description) === '' || trim($description) === '') {
+        throw new \InvalidArgumentException("La description de la tache ne doit pas être vide");
+    }
+     if ($description > 255) {
+        throw new \InvalidArgumentException("La description de la tache ne doit pas dépasser 255 caractère");
+    }
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of dueDate
+     */
+    public function getDueDate(): ?\DateTimeInterface
+    {
+        return $this->dueDate;
+    }
+
+    /**
+     * Set the value of dueDate
+     */
+    public function setDueDate(?\DateTimeInterface $dueDate): self
+    {
+        $this->dueDate = $dueDate;
+
+        return $this;
+    }
 }
