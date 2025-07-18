@@ -1,5 +1,12 @@
-| Fichier/Classe | Type de test recommandé | Outils utilisables | Justification | Priorité (1-3) |
-|----------------|------------------------|-------------------|-----------------|----------------|
+|       Fichier/Classe     | Type de test recommandé | Outils utilisables |                                     Justification                      | Priorité (1-3) |
+|Task.php------------------|Test Unitaire------------|PhpUnit-------------|Test d'une fonctionnalité seule-----------------------------------------|----Priorité 1--|
+|User.php------------------|Test Unitaire------------|PhpUnit-------------|Test d'une fonctionnalité a part----------------------------------------|----Priorité 1--|
+|RegistrationController.php|Test d'integration-------|WebTestCase---------|Test d'intéraction entre 2 fonctionnalités------------------------------|----Priorité 3--|
+|SecurityController.php----|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test entre 2 fonctionnalitées|----Priorité 3--|
+|TaskController.php--------|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test entre 2 fonctionnalitées|----Priorité 3--|
+|TaskService.php-----------|Test Unitaire + Mock-----|PhpUnit Mock--------|Test Unitaire et Mock recommandé car c'est un test d'un service---------|----Priorité 2--|
+|TaskRepository.php--------|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test entre 2 fonctionnalitées|----Priorité 3--|
+|UserRepository.php--------|Test d'integration-------|WebTestCase---------|Test d'integration recommandé car c'est un test de repository-----------|----Priorité 3--|
 
 
 
