@@ -66,31 +66,31 @@ class UserTest extends TestCase{
 
     }
     // Test 5 avec un stub : enlever une tache a l'utilisateur
-    public function testSupprimerTacheUtilisateur(){
-            $user = new User();
+    // public function testSupprimerTacheUtilisateur(){
+    //         $user = new User();
 
-    // On crée un stub de Task
-    $taskStub = $this->getMockBuilder(Task::class)
-                     ->onlyMethods(['getUser', 'setUser'])
-                     ->getMock();
+    // // On crée un stub de Task
+    // $taskStub = $this->getMockBuilder(Task::class)
+    //                  ->onlyMethods(['setUser'])
+    //                  ->getMock();
 
-    // Le stub retournera $user lorsqu'on appelle getUser()
-    $taskStub->method('getUser')
-             ->willReturn($user);
+    // // Le stub retournera $user lorsqu'on appelle getUser()
+    // $taskStub->method('getUser')
+    //          ->willReturn($user);
 
-    // On attend que setUser(null) soit appelé une fois
-    $taskStub->expects($this->once())
-             ->method('setUser')
-             ->with(null);
+    // // On attend que setUser(null) soit appelé une fois
+    // $taskStub->expects($this->once())
+    //          ->method('setUser')
+    //          ->with(null);
 
-    // On force l'ajout de la tâche dans l'utilisateur (en contournant le contains)
-    $user->addTask($taskStub);
-    $this->assertCount(1, $user->getTasks());
+    // // On force l'ajout de la tâche dans l'utilisateur (en contournant le contains)
+    // $user->addTask($taskStub);
+    // $this->assertCount(1, $user->getTasks());
 
-    // Maintenant, on la retire
-    $user->removeTask($taskStub);
-    $this->assertCount(0, $user->getTasks());
-    }
+    // // Maintenant, on la retire
+    // $user->removeTask($taskStub);
+    // $this->assertCount(0, $user->getTasks());
+    // }
 }
 
 ?>

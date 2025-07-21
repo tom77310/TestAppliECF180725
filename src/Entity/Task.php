@@ -88,11 +88,11 @@ class Task
      */
     public function setDescription(?string $description): self
     {
-        if ($description === null || trim($description) === '' || trim($description) === '') {
+        if ($description === null || trim($description) === '') {
         throw new \InvalidArgumentException("La description de la tache ne doit pas être vide");
     }
      if ($description > 255) {
-        throw new \InvalidArgumentException("La description de la tache ne doit pas dépasser 255 caractère");
+        throw new \InvalidArgumentException("La description de la tache ne doit pas dépasser 255 caractères");
     }
         $this->description = $description;
 
